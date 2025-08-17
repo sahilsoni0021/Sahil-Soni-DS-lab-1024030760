@@ -10,7 +10,7 @@ int countDistinct(int arr[], int n) {
     for (int i = 0; i < n; i++) {
         bool isDistinct = true;
 
-        // check if arr[i] appeared before
+        
         for (int j = 0; j < i; j++) {
             if (arr[i] == arr[j]) {
                 isDistinct = false;

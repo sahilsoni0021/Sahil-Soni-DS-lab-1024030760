@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-// Binary Search Function
+
 int binarySearch(int arr[], int n, int key) {
     int low = 0, high = n - 1;
 
@@ -12,14 +12,14 @@ int binarySearch(int arr[], int n, int key) {
         int mid = (low + high) / 2;
 
         if (arr[mid] == key)
-            return mid;  // element found
+            return mid;  
         else if (arr[mid] < key)
-            low = mid + 1;  // search in right half
+            low = mid + 1;  
         else
-            high = mid - 1; // search in left half
+            high = mid - 1; 
     }
 
-    return -1; // not found
+    return -1; 
 }
 
 int main() {

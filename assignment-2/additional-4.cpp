@@ -16,7 +16,7 @@ int main() {
         cin >> arr[i];
     }
 
-    // Step 1: Count 0s, 1s, 2s
+    
     int count0 = 0, count1 = 0, count2 = 0;
     for (int i = 0; i < n; i++) {
         if (arr[i] == 0)
@@ -27,7 +27,7 @@ int main() {
             count2++;
     }
 
-    // Step 2: Rewrite array with counts
+    
     int index = 0;
     for (int i = 0; i < count0; i++) {
         arr[index] = 0;
@@ -42,7 +42,7 @@ int main() {
         index++;
     }
 
-    // Step 3: Print result
+    
     cout << "Sorted array: ";
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";

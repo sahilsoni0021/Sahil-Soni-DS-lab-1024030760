@@ -17,18 +17,18 @@ int main() {
         cin >> arr[i];
     }
 
-    // Traverse from end because we are shifting
+    
     for (int i = n - 1; i >= 0; i--) {
         if (arr[i] == 2) {
-            // shift elements to the right
+            
             for (int j = n - 1; j > i; j--) {
                 arr[j] = arr[j - 1];
             }
-            // duplicate '2'
+            
             if (i + 1 < n) {
                 arr[i + 1] = 2;
             }
-            i--; // skip next index to avoid re-checking duplicate
+            i--; 
         }
     }
 

@@ -7,7 +7,7 @@
 using namespace std;
 
 int countPairsWithDiffK(int arr[], int n, int k) {
-    sort(arr, arr + n);  // sort the array first
+    sort(arr, arr + n);  
 
     int i = 0, j = 1, count = 0;
 
@@ -22,7 +22,7 @@ int countPairsWithDiffK(int arr[], int n, int k) {
         else if (diff > k) {
             i++;
         } 
-        else { // diff < k
+        else { 
             j++;
         }
     }

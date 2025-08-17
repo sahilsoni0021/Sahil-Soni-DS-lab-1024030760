@@ -8,7 +8,7 @@
 using namespace std;
 
 int findMissingLinear(int arr[], int n) {
-    int total_sum = n * (n + 1) / 2; // sum of 1..n
+    int total_sum = n * (n + 1) / 2; 
     int arr_sum = 0;
 
     for (int i = 0; i < n - 1; i++) {
@@ -45,15 +45,15 @@ int findMissingBinary(int arr[], int n) {
         int mid = (low + high) / 2;
 
         if (arr[mid] == mid + 1) {
-            // missing is on the right side
+            
             low = mid + 1;
         } else {
-            // missing is on the left side
+            
             high = mid - 1;
         }
     }
 
-    return low + 1; // missing number
+    return low + 1; 
 }
 
 int main() {

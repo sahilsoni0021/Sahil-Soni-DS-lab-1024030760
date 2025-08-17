@@ -15,11 +15,11 @@ int main() {
     int n = s.length();
     bool found = false;
 
-    // Try all ways to split into 3 parts
+   
     for (int i = 1; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
             
-            // making substrings using simple loops
+            
             string part1 = "";
             for (int k = 0; k < i; k++) {
                 part1 = part1 + s[k];
@@ -35,7 +35,7 @@ int main() {
                 part3 = part3 + s[k];
             }
 
-            // Now check if part1 is inside part2 and part3
+            
             bool p1_in_p2 = false, p1_in_p3 = false;
             for (int a = 0; a <= part2.length() - part1.length(); a++) {
                 bool match = true;
