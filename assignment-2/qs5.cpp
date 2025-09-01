@@ -75,3 +75,37 @@ public:
         }
     }
 };
+
+
+int main() {
+    int n = 3;
+
+    DiagonalMatrix d(n);
+    d.set(1, 1, 5);
+    d.set(2, 2, 8);
+    d.set(3, 3, 6);
+    cout << "Diagonal Matrix:" << endl;
+    d.display();
+
+    LowerTriangular l(n);
+    l.set(1, 1, 1);
+    l.set(2, 1, 2);
+    l.set(2, 2, 3);
+    l.set(3, 1, 4);
+    l.set(3, 2, 5);
+    l.set(3, 3, 6);
+    cout << "\nLower Triangular Matrix:" << endl;
+    l.display();
+
+    UpperTriangular u(n);
+    u.set(1, 1, 7);
+    u.set(1, 2, 8);
+    u.set(1, 3, 9);
+    u.set(2, 2, 10);
+    u.set(2, 3, 11);
+    u.set(3, 3, 12);
+    cout << "\nUpper Triangular Matrix:" << endl;
+    u.display();
+
+    return 0;
+}

@@ -3,27 +3,18 @@
 // is equal to k.
 
 #include <iostream>
-#include <algorithm>
+#include <cmath> 
 using namespace std;
 
-int countPairsWithDiffK(int arr[], int n, int k) {
-    sort(arr, arr + n);  
+int countPairs(int arr[], int n, int k) {
+    int count = 0;
 
-    int i = 0, j = 1, count = 0;
-
-    while (i < n && j < n) {
-        int diff = arr[j] - arr[i];
-
-        if (diff == k) {
-            count++;
-            i++;
-            j++;
-        } 
-        else if (diff > k) {
-            i++;
-        } 
-        else { 
-            j++;
+    
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (abs(arr[i] - arr[j]) == k) {
+                count++;
+            }
         }
     }
     return count;
@@ -31,11 +22,11 @@ int countPairsWithDiffK(int arr[], int n, int k) {
 
 int main() {
     int n, k;
-    cout << "Enter number of elements: ";
+    cout << "Enter size of array: ";
     cin >> n;
 
     int arr[100];
-    cout << "Enter " << n << " elements: ";
+    cout << "Enter array elements: ";
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
@@ -43,8 +34,8 @@ int main() {
     cout << "Enter value of k: ";
     cin >> k;
 
-    cout << "Total pairs with difference " << k << " = "
-         << countPairsWithDiffK(arr, n, k) << endl;
+    cout << "Total pairs with difference " << k << " = " 
+         << countPairs(arr, n, k) << endl;
 
     return 0;
 }
